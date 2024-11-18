@@ -1,0 +1,152 @@
+@import "../styles/common.scss";
+
+
+// Định nghĩa biến màu nếu chưa có
+$text-dark: #ffffff; // Màu tối dùng cho văn bản
+$colormain: #4b4747; // Màu chính của bạn
+$bg-menu-color: #ffffff; // Màu nền của menu
+$box-shadow-color: rgba(0, 0, 0, 0.1); // Màu của bóng đổ
+$text-in-light: #0004fe; // Màu chữ trên nền sáng
+$border: #ddd; // Màu của đường viền
+
+.navigator-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .menu-group {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+
+            .menu-list {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-group-name {
+            line-height: 40px;
+            padding: 0 20px;
+            border-right: 1px solid $border;
+            font-weight: 500;
+            color: $text-dark;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:first-child {
+                border-left: 1px solid $border;
+            }
+
+            &:hover {
+                background-color: lighten($colormain, 20%);
+                color: $colormain;
+            }
+        }
+
+        .menu-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $bg-menu-color;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            list-style: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border-radius: 4px;
+
+            .menu {
+                width: 220px;
+                padding: 0 20px;
+                height: 40px;
+                line-height: 40px;
+                position: relative;
+
+                &:hover {
+                    background-color: lighten($bg-menu-color, 5%);
+
+                    .sub-menu-list {
+                        display: block;
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                .menu-link {
+                    text-decoration: none;
+                    color: $text-in-light;
+                    font-weight: 500;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $colormain;
+                    }
+                }
+
+                .sub-menu-list {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    background-color: $bg-menu-color;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    padding: 10px 0;
+                    opacity: 0;
+                    transform: translateX(10px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    border-radius: 4px;
+
+                    .sub-menu {
+                        padding: 0 20px;
+                        height: 40px;
+                        line-height: 40px;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background-color: lighten($bg-menu-color, 10%);
+                        }
+
+                        .sub-menu-link {
+                            text-decoration: none;
+                            color: $text-in-light;
+                            transition: color 0.3s ease;
+
+                            &:hover {
+                                color: $colormain;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                        }
+
+                        &.active a {
+                            font-weight: 600;
+                            color: $colormain;
+                        }
+                    }
+                }
+
+                .icon-right {
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+                    font-size: 12px;
+                    color: $text-in-light;
+                }
+
+                &.active span {
+                    font-weight: 600;
+                    color: $colormain;
+                }
+            }
+        }
+    }
+}

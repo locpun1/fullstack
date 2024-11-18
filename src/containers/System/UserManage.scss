@@ -1,0 +1,156 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.btn-edit {
+    width: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: orange;
+
+    &:hover {
+        background-color: transparent !important;
+        color: rgb(196, 129, 4) !important;
+    }
+}
+
+.btn-delete {
+    width: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(255, 0, 0);
+
+    &:hover {
+        background-color: transparent !important;
+        color: rgb(160, 2, 2) !important;
+    }
+}
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$border-radius: 5px;
+$input-border-color: #ced4da;
+$input-focus-color: $primary-color;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+//modal 
+.modal-header .close {
+    font-size: 1.5rem;
+    color: #fff;
+    border: none;
+    background: transparent;
+    opacity: 1;
+}
+
+.modal-header .close:hover {
+    color: #ff2e2e;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    color: $secondary-color;
+
+    // General input styling
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid $input-border-color;
+        border-radius: $border-radius;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:focus {
+            border-color: $input-focus-color;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+    }
+
+    label {
+        font-weight: 500;
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        margin-top: 20px;
+        align-self: flex-start;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// Specific layout styles for rows and form groups
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .form-group {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+// Header styling
+.col-12.mt-3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+// Responsive design for smaller screens
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        min-width: 100%;
+    }
+}

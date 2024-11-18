@@ -1,0 +1,204 @@
+.home-header-container {
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+    background-color: #fff;
+    top: 0;
+
+    .home-header-content {
+        width: 1024px;
+        height: 100%;
+        display: flex;
+        margin: 0 auto;
+
+        .home-header-logo {
+            width: 25%;
+
+            .header-logo-box {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .choose-bar {
+                    font-size: 20px;
+                    cursor: pointer;
+                    color: gray;
+                }
+
+                .header-logo {
+                    background: url('../../assets/z5488009739821_489dc50e8aa063124d45c38a355ab231.jpg') center center no-repeat;
+                    height: 90%;
+                    width: 20%;
+                    border-radius: 50%;
+                }
+
+                .header-logo-name {
+                    font-size: 20px;
+                    color: #f49e00;
+                    font-weight: 800;
+                }
+            }
+
+
+        }
+
+        .home-header-center {
+            width: 65%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            .category-box {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+
+                .child-category {
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .subs-title {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .home-header-help {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .support {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    color: #a5a5a5;
+                }
+            }
+
+            .language-vi {
+                cursor: pointer;
+
+                &.action {
+                    span {
+                        color: orange;
+                    }
+
+                }
+            }
+
+            .language-en {
+                cursor: pointer;
+
+                &.action {
+                    span {
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url('../../assets/pexels-photo-5638644.jpeg') center center no-repeat;
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .home-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        .home_title1 {
+            color: #fff;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            margin-bottom: 8px;
+        }
+
+        .home_title2 {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+
+
+
+
+
+    .search {
+        border: 1px solid f7d800;
+        width: 400px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        background-color: #f7d800;
+
+        .input-search {
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+            height: 100%;
+        }
+    }
+
+    .list-options {
+        display: flex;
+        margin-top: 32px;
+        background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        .option {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                color: #76bcf5;
+                transform: scale(1.1);
+            }
+
+
+            .option-icon {
+                font-size: 28px;
+                background-color: #fff;
+                padding: 10px;
+                border-radius: 50%;
+                border: 2px solid #cdcbcb;
+                color: #76bcf5;
+            }
+
+            .option-name {
+                font-size: 16px;
+            }
+        }
+    }
+}
